@@ -1,0 +1,335 @@
+/* ===== RUSSIAN ROULETTE GAME STYLES ===== */
+.slide-game {
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+.game-container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.game-title {
+    font-size: 64px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    animation: pulse 2s infinite;
+}
+
+.game-subtitle {
+    font-size: 24px;
+    color: #ff6b6b;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+    }
+}
+
+/* Revolver Design */
+.revolver-container {
+    margin: 40px auto;
+    perspective: 1000px;
+}
+
+.revolver {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.cylinder {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #2c3e50, #34495e);
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.cylinder.spinning {
+    animation: spinCylinder 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes spinCylinder {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1080deg);
+    }
+}
+
+.chamber {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #1a1a1a;
+    border: 3px solid #555;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.chamber:nth-child(1) {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chamber:nth-child(2) {
+    top: 35px;
+    right: 15px;
+}
+
+.chamber:nth-child(3) {
+    bottom: 35px;
+    right: 15px;
+}
+
+.chamber:nth-child(4) {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.chamber:nth-child(5) {
+    bottom: 35px;
+    left: 15px;
+}
+
+.chamber:nth-child(6) {
+    top: 35px;
+    left: 15px;
+}
+
+.chamber.loaded {
+    background: radial-gradient(circle, #ff4444, #cc0000);
+    box-shadow: 
+        inset 0 0 10px rgba(255, 0, 0, 0.8),
+        0 0 15px rgba(255, 0, 0, 0.6);
+    animation: glow 1.5s infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 
+            inset 0 0 10px rgba(255, 0, 0, 0.8),
+            0 0 15px rgba(255, 0, 0, 0.6);
+    }
+    50% {
+        box-shadow: 
+            inset 0 0 15px rgba(255, 0, 0, 1),
+            0 0 25px rgba(255, 0, 0, 0.8);
+    }
+}
+
+.barrel {
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(to right, #34495e, #2c3e50);
+    position: absolute;
+    right: -80px;
+    top: 55px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.handle {
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(145deg, #8b4513, #654321);
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+    border-radius: 10px 10px 20px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Game Info */
+.game-info {
+    margin: 40px 0;
+}
+
+.bullets-display {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.bullet-icon {
+    font-size: 36px;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.bullet-icon.used {
+    opacity: 0.2;
+    filter: grayscale(100%);
+}
+
+.attempts-text {
+    font-size: 28px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#attemptsLeft {
+    color: #ff6b6b;
+    font-size: 36px;
+}
+
+/* Game Controls */
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.game-btn {
+    padding: 18px 35px;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+#spinBtn {
+    background: linear-gradient(145deg, #4ecdc4, #44a99e);
+    color: white;
+}
+
+#spinBtn:hover:not(:disabled) {
+    background: linear-gradient(145deg, #44a99e, #3d8f85);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+}
+
+#shootBtn {
+    background: linear-gradient(145deg, #ff6b6b, #ee5a52);
+    color: white;
+}
+
+#shootBtn:hover:not(:disabled) {
+    background: linear-gradient(145deg, #ee5a52, #d84a42);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(255, 0, 0, 0.4);
+}
+
+.reset-btn {
+    background: linear-gradient(145deg, #95a5a6, #7f8c8d);
+    color: white;
+}
+
+.reset-btn:hover {
+    background: linear-gradient(145deg, #7f8c8d, #6c7a7b);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4);
+}
+
+.game-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Game Message */
+.game-message {
+    min-height: 60px;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.game-message.safe {
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.1);
+    border: 2px solid #2ecc71;
+    animation: fadeIn 0.5s ease;
+}
+
+.game-message.dead {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+    border: 2px solid #e74c3c;
+    animation: shake 0.5s ease, fadeIn 0.5s ease;
+}
+
+.game-message.win {
+    color: #f39c12;
+    background: rgba(243, 156, 18, 0.1);
+    border: 2px solid #f39c12;
+    animation: celebration 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+@keyframes celebration {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1) rotate(-5deg); }
+    75% { transform: scale(1.1) rotate(5deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .game-title {
+        font-size: 42px;
+    }
+    
+    .game-subtitle {
+        font-size: 18px;
+    }
+    
+    .revolver {
+        transform: scale(0.8);
+    }
+    
+    .game-btn {
+        padding: 14px 25px;
+        font-size: 18px;
+    }
+}
+

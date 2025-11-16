@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -6,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urbanisation - Presentation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
     <div class="presentation">
@@ -156,7 +156,50 @@
             </div>
         </section>
 
-        <!-- Slide 6: Conclusion -->
+        <!-- Slide 6: Russian Roulette Game -->
+        <section class="slide slide-game">
+            <div class="game-container">
+                <h1 class="game-title">🎯 Russian Roulette Game 🎯</h1>
+                <p class="game-subtitle">Test your luck! 6 chambers, 1 bullet...</p>
+                
+                <div class="revolver-container">
+                    <div class="revolver">
+                        <div class="cylinder" id="cylinder">
+                            <div class="chamber"></div>
+                            <div class="chamber"></div>
+                            <div class="chamber"></div>
+                            <div class="chamber"></div>
+                            <div class="chamber"></div>
+                            <div class="chamber"></div>
+                        </div>
+                        <div class="barrel"></div>
+                        <div class="handle"></div>
+                    </div>
+                </div>
+
+                <div class="game-info">
+                    <div class="bullets-display">
+                        <span class="bullet-icon" id="bullet1">💥</span>
+                        <span class="bullet-icon" id="bullet2">💥</span>
+                        <span class="bullet-icon" id="bullet3">💥</span>
+                        <span class="bullet-icon" id="bullet4">💥</span>
+                        <span class="bullet-icon" id="bullet5">💥</span>
+                        <span class="bullet-icon" id="bullet6">💥</span>
+                    </div>
+                    <p class="attempts-text">Bullets Remaining: <span id="attemptsLeft">6</span></p>
+                </div>
+
+                <div class="game-controls">
+                    <button class="game-btn" id="spinBtn">🔄 Spin Cylinder</button>
+                    <button class="game-btn" id="shootBtn" disabled>🔫 Pull Trigger</button>
+                    <button class="game-btn reset-btn" id="resetBtn">🔁 Reset Game</button>
+                </div>
+
+                <div class="game-message" id="gameMessage"></div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Conclusion -->
         <section class="slide slide-conclusion">
             <div class="conclusion-left">
                 <div class="image-container conclusion-img">
@@ -173,7 +216,7 @@
             </div>
         </section>
 
-        <!-- Slide 7: Thank You -->
+        <!-- Slide 8: Thank You -->
         <section class="slide slide-thankyou">
             <div class="thankyou-content">
                 <h1 class="thankyou-title">Thanks for watching!</h1>
@@ -187,12 +230,13 @@
     <!-- Navigation Controls -->
     <div class="controls">
         <button id="prevBtn" class="nav-btn">←</button>
-        <span id="slideNumber" class="slide-number">1 / 8</span>
+        <span id="slideNumber" class="slide-number">1 / 9</span>
         <button id="nextBtn" class="nav-btn">→</button>
         <button id="fullscreenBtn" class="fullscreen-btn">⛶</button>
     </div>
 
     <script src="script.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
 
