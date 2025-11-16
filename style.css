@@ -533,7 +533,7 @@ body {
 .controls {
     position: fixed;
     bottom: 30px;
-    left: 50%;
+    left: 90%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
