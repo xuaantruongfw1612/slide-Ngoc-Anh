@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -345,6 +344,191 @@ body {
     white-space: nowrap;
 }
 
+/* ===== SLIDE 4: POSITIVE EFFECTS ===== */
+.slide-positive {
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.left-image {
+    width: 55%;
+}
+
+.image-container.large-img {
+    height: 650px;
+}
+
+.right-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.slide-title-right {
+    font-size: 52px;
+    font-style: italic;
+    font-weight: normal;
+    color: #5a4a3a;
+    line-height: 1.3;
+}
+
+.effects-list {
+    margin-top: 20px;
+}
+
+.effects-list p {
+    font-size: 22px;
+    color: #4a3a2a;
+    margin-bottom: 30px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.effects-list p::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    font-size: 28px;
+}
+
+.small-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 320px;
+}
+
+.small-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== SLIDE 5: NEGATIVE EFFECTS ===== */
+.slide-negative {
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.left-text {
+    width: 40%;
+    padding-right: 30px;
+}
+
+.slide-title-negative {
+    font-size: 52px;
+    font-style: italic;
+    font-weight: normal;
+    color: #5a4a3a;
+    margin-bottom: 50px;
+    line-height: 1.3;
+}
+
+.negative-list p {
+    font-size: 20px;
+    color: #4a3a2a;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.negative-list p::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+}
+
+.negative-images {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.image-container.neg-img {
+    height: 300px;
+}
+
+/* ===== SLIDE 6: CONCLUSION ===== */
+.slide-conclusion {
+    gap: 40px;
+    align-items: center;
+}
+
+.conclusion-left {
+    width: 50%;
+}
+
+.image-container.conclusion-img {
+    height: 700px;
+}
+
+.conclusion-right {
+    width: 50%;
+    padding-left: 40px;
+}
+
+.slide-title-conclusion {
+    font-size: 64px;
+    font-style: italic;
+    font-weight: normal;
+    color: #6b5746;
+    margin-bottom: 60px;
+}
+
+.conclusion-points p {
+    font-size: 24px;
+    color: #4a3a2a;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    padding-left: 30px;
+    position: relative;
+}
+
+.conclusion-points p::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    font-size: 30px;
+}
+
+/* ===== SLIDE 7: THANK YOU ===== */
+.slide-thankyou {
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.thankyou-content {
+    width: 45%;
+}
+
+.thankyou-title {
+    font-size: 84px;
+    font-style: italic;
+    font-weight: normal;
+    color: #6b5746;
+    line-height: 1.2;
+}
+
+.thankyou-image {
+    width: 50%;
+    height: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.thankyou-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* ===== NAVIGATION CONTROLS ===== */
 .controls {
     position: fixed;
@@ -406,13 +590,16 @@ body {
         font-size: 56px;
     }
     
-    .slide-past .slide-title,
-    .slide-changes .slide-title {
+    .slide-title,
+    .slide-title-right,
+    .slide-title-negative {
         font-size: 44px;
     }
     
     .bullet-list li,
-    .change-points p {
+    .change-points p,
+    .effects-list p,
+    .negative-list p {
         font-size: 18px;
     }
 }
