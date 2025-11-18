@@ -1,242 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urbanisation - Presentation</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="game.css">
-</head>
-<body>
-    <div class="presentation">
-        <!-- Slide 0: Title Slide -->
-        <section class="slide slide-title active">
-            <div class="container">
-                <div class="left-section">
-                    <h1 class="title">URBANISATION</h1>
-                    <p class="subtitle">A study of urban development in Vietnam's capital</p>
-                    <h2 class="group-title">Group</h2>
-                    <ul class="members">
-                        <li>Phương Linh</li>
-                        <li>Huệ</li>
-                        <li>Ngọc Anh</li>
-                        <li>Thùy</li>
-                        <li>Phương</li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Urbanisation - Presentation</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="game.css" />
+    </head>
+    <body>
+        <div class="presentation">
+            <!-- Slide 0: Title Slide -->
+            <section class="slide slide-title active">
+                <div class="container">
+                    <div class="left-section">
+                        <h1 class="title">URBANISATION</h1>
+                        <p class="subtitle">
+                            A study of urban development in Vietnam's capital
+                        </p>
+                        <h2 class="group-title">Group</h2>
+                        <ul class="members">
+                            <li>Phương Linh</li>
+                            <li>Huệ</li>
+                            <li>Ngọc Anh</li>
+                            <li>Thùy</li>
+                            <li>Phương</li>
+                        </ul>
+                    </div>
+
+                    <div class="right-section">
+                        <div class="image-container image-top">
+                            <img src="assets/imgs/11.png" alt="Urban skyline" />
+                        </div>
+                        <div class="images-bottom">
+                            <div class="image-container">
+                                <img
+                                    src="assets/imgs/13.png"
+                                    alt="Street view"
+                                />
+                            </div>
+                            <div class="image-container">
+                                <img src="assets/imgs/12.png" alt="City view" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 1: Russian Roulette Game -->
+            <section class="slide slide-game">
+                <div class="game-container">
+                    <h1 class="game-title">🎯 Russian Roulette Game 🎯</h1>
+                    <p class="game-subtitle">
+                        Test your luck! 6 chambers, 1 bullet...
+                    </p>
+
+                    <div class="revolver-container">
+                        <div class="revolver">
+                            <div class="cylinder" id="cylinder">
+                                <div class="chamber"></div>
+                                <div class="chamber"></div>
+                                <div class="chamber"></div>
+                                <div class="chamber"></div>
+                                <div class="chamber"></div>
+                                <div class="chamber"></div>
+                            </div>
+                            <div class="barrel"></div>
+                            <div class="handle"></div>
+                        </div>
+                    </div>
+
+                    <div class="game-info">
+                        <div class="bullets-display">
+                            <span class="bullet-icon" id="bullet1">💥</span>
+                            <span class="bullet-icon" id="bullet2">💥</span>
+                            <span class="bullet-icon" id="bullet3">💥</span>
+                            <span class="bullet-icon" id="bullet4">💥</span>
+                            <span class="bullet-icon" id="bullet5">💥</span>
+                            <span class="bullet-icon" id="bullet6">💥</span>
+                        </div>
+                        <p class="attempts-text">
+                            Bullets Remaining: <span id="attemptsLeft">6</span>
+                        </p>
+                    </div>
+
+                    <div class="game-controls">
+                        <button class="game-btn" id="spinBtn">
+                            Spin Cylinder
+                        </button>
+                        <button class="game-btn" id="shootBtn" disabled>
+                            Pull Trigger
+                        </button>
+                        <button class="game-btn reset-btn" id="resetBtn">
+                            Reset Game
+                        </button>
+                    </div>
+
+                    <div class="game-message" id="gameMessage"></div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Introduction -->
+            <section class="slide slide-intro">
+                <div class="content-left">
+                    <h1 class="main-title">Introduction</h1>
+                    <div class="definition">
+                        <p>
+                            -
+                            <strong
+                                >Urbanisation is the process of cities growing
+                                and changing, with more people moving from rural
+                                areas to live and work in cities.</strong
+                            >
+                        </p>
+                    </div>
+                </div>
+                <div class="content-right">
+                    <div class="video-container">
+                        <video controls>
+                            <source
+                                src="assets/videos/VIDEO_DOWNLOAD_1760090353976_1761149777292.mp4"
+                                type="video/mp4"
+                            />
+                            Trình duyệt của bạn không hỗ trợ thẻ video.
+                        </video>
+                        <div class="video-label">Hà Nội: Sau giải phóng</div>
+                        <div class="red-star">★</div>
+                    </div>
+                </div>
+                <div class="bottom-text">
+                    <p>
+                        -
+                        <strong
+                            >Hanoi, the capital of Vietnam, is an example of
+                            rapid urbanisation in recent decades.</strong
+                        >
+                    </p>
+                </div>
+            </section>
+
+            <!-- Slide 3: What was Hanoi like in the past? -->
+            <section class="slide slide-past">
+                <div class="images-left">
+                    <div class="image-container large">
+                        <img src="assets/imgs/21.png" alt="Old Hanoi street" />
+                    </div>
+
+                    <div class="image-container large bottom">
+                        <img
+                            src="assets/imgs/3.4.jpg"
+                            alt="Second image below"
+                        />
+                    </div>
+                </div>
+                <div class="content-center">
+                    <h2 class="slide-title">
+                        2. What was Hanoi like in the past?
+                    </h2>
+                    <ul class="bullet-list">
+                        <li>
+                            Before urbanisation, many areas were farmland and
+                            small villages.
+                        </li>
+                        <li>
+                            People depended mainly on agriculture for living.
+                        </li>
+                        <li>
+                            There were fewer roads, buildings, and modern
+                            facilities.
+                        </li>
                     </ul>
                 </div>
-
-                <div class="right-section">
-                    <div class="image-container image-top">
-                        <img src="image1.jpg" alt="Urban skyline">
+                <div class="images-right">
+                    <div class="image-container small top">
+                        <img src="assets/imgs/22.png" alt="Farmers working" />
                     </div>
-                    <div class="images-bottom">
-                        <div class="image-container">
-                            <img src="image2.jpg" alt="Street view">
-                        </div>
-                        <div class="image-container">
-                            <img src="image3.jpg" alt="City view">
-                        </div>
+                    <div class="image-container small bottom">
+                        <img src="assets/imgs/23.png" alt="Old Hanoi crowd" />
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Slide 1: Russian Roulette Game -->
-        <section class="slide slide-game">
-            <div class="game-container">
-                <h1 class="game-title">🎯 Russian Roulette Game 🎯</h1>
-                <p class="game-subtitle">Test your luck! 6 chambers, 1 bullet...</p>
-                
-                <div class="revolver-container">
-                    <div class="revolver">
-                        <div class="cylinder" id="cylinder">
-                            <div class="chamber"></div>
-                            <div class="chamber"></div>
-                            <div class="chamber"></div>
-                            <div class="chamber"></div>
-                            <div class="chamber"></div>
-                            <div class="chamber"></div>
-                        </div>
-                        <div class="barrel"></div>
-                        <div class="handle"></div>
+            <!-- Slide 4: How has Hanoi changed? -->
+            <section class="slide slide-changes">
+                <div class="text-content">
+                    <h2 class="slide-title">3. How has Hanoi changed?</h2>
+                    <div class="change-points">
+                        <p>
+                            Modern apartment complexes, shopping centers, and
+                            entertainment areas were built.
+                        </p>
+                        <p>
+                            Examples: Times City, Vinhomes Smart City, Phú Mỹ
+                            Hưng (in HCM) – but you can focus on Times City as a
+                            case study in Hanoi.
+                        </p>
+                        <p>
+                            Infrastructure improved: wider roads, bridges, metro
+                            system.
+                        </p>
+                        <p>- Population growth and increased businesses.</p>
                     </div>
                 </div>
-
-                <div class="game-info">
-                    <div class="bullets-display">
-                        <span class="bullet-icon" id="bullet1">💥</span>
-                        <span class="bullet-icon" id="bullet2">💥</span>
-                        <span class="bullet-icon" id="bullet3">💥</span>
-                        <span class="bullet-icon" id="bullet4">💥</span>
-                        <span class="bullet-icon" id="bullet5">💥</span>
-                        <span class="bullet-icon" id="bullet6">💥</span>
+                <div class="images-modern">
+                    <div class="image-container modern-left">
+                        <img
+                            src="assets/imgs/31.png"
+                            alt="Modern apartment complex"
+                        />
+                        <div class="caption">Modern apartment complexes</div>
                     </div>
-                    <p class="attempts-text">Bullets Remaining: <span id="attemptsLeft">6</span></p>
+                    <div class="image-container modern-right">
+                        <img src="assets/imgs/32.png" alt="Wide roads" />
+                        <div class="caption">Wider roads</div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="game-controls">
-                    <button class="game-btn" id="spinBtn">Spin Cylinder</button>
-                    <button class="game-btn" id="shootBtn" disabled>Pull Trigger</button>
-                    <button class="game-btn reset-btn" id="resetBtn">Reset Game</button>
+            <!-- Slide 5: Positive effects -->
+            <section class="slide slide-positive">
+                <div class="left-image">
+                    <div class="image-container large-img">
+                        <img
+                            src="assets/imgs/41.png"
+                            alt="Modern apartment interior"
+                        />
+                    </div>
                 </div>
-
-                <div class="game-message" id="gameMessage"></div>
-            </div>
-        </section>
-
-        <!-- Slide 2: Introduction -->
-        <section class="slide slide-intro">
-            <div class="content-left">
-                <h1 class="main-title">Introduction</h1>
-                <div class="definition">
-                    <p>- <strong>Urbanisation is the process of cities growing and changing</strong>, with more people moving from rural areas to live and work in cities.</p>
-                </div>
-            </div>
-            <div class="content-right">
-                <div class="video-container">
-                    <img src="hanoi-old.jpg" alt="Hà Nội Sau giải phóng">
-                    <div class="video-label">Hà Nội: Sau giải phóng</div>
-                    <div class="red-star">★</div>
-                </div>
-            </div>
-            <div class="bottom-text">
-                <p>- Hanoi, the capital of Vietnam, is an example of rapid urbanisation in recent decades.</p>
-            </div>
-        </section>
-
-        <!-- Slide 3: What was Hanoi like in the past? -->
-        <section class="slide slide-past">
-            <div class="images-left">
-                <div class="image-container large">
-                    <img src="old-street.jpg" alt="Old Hanoi street">
-                </div>
-            </div>
-            <div class="content-center">
-                <h2 class="slide-title">2. What was Hanoi like in the past?</h2>
-                <ul class="bullet-list">
-                    <li>Before urbanisation, many areas were farmland and small villages.</li>
-                    <li>People depended mainly on agriculture for living.</li>
-                    <li>There were fewer roads, buildings, and modern facilities.</li>
-                </ul>
-            </div>
-            <div class="images-right">
-                <div class="image-container small top">
-                    <img src="farmers.jpg" alt="Farmers working">
-                </div>
-                <div class="image-container small bottom">
-                    <img src="old-hanoi-crowd.jpg" alt="Old Hanoi crowd">
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 4: How has Hanoi changed? -->
-        <section class="slide slide-changes">
-            <div class="text-content">
-                <h2 class="slide-title">3. How has Hanoi changed?</h2>
-                <div class="change-points">
-                    <p>- Modern apartment complexes, shopping centers, and entertainment areas were built.</p>
-                    <p>- Examples: Times City, Vinhomes Smart City, Phú Mỹ Hưng (in HCM) – but you can focus on Times City as a case study in Hanoi.</p>
-                    <p>- Infrastructure improved: wider roads, bridges, metro system.</p>
-                    <p>- Population growth and increased businesses.</p>
-                </div>
-            </div>
-            <div class="images-modern">
-                <div class="image-container modern-left">
-                    <img src="apartment-complex.jpg" alt="Modern apartment complex">
-                    <div class="caption">Modern apartment complexes</div>
-                </div>
-                <div class="image-container modern-right">
-                    <img src="wide-roads.jpg" alt="Wide roads">
-                    <div class="caption">Wider roads</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 5: Positive effects -->
-        <section class="slide slide-positive">
-            <div class="left-image">
-                <div class="image-container large-img">
-                    <img src="modern-apartment-interior.jpg" alt="Modern apartment interior">
-                </div>
-            </div>
-            <div class="right-content">
-                <h2 class="slide-title-right">4. Positive effects of urbanisation</h2>
-                <div class="effects-list">
-                    <p>- Better living standards and modern housing.</p>
-                    <p>- More job opportunities in services, commerce, and education.</p>
-                    <p>- Improved public facilities like hospitals, schools, and parks.</p>
+                <div class="right-content">
+                    <h2 class="slide-title-right">
+                        4. Positive effects of urbanisation
+                    </h2>
+                    <div class="effects-list">
+                        <p>- Better living standards and modern housing.</p>
+                        <p>
+                            - More job opportunities in services, commerce, and
+                            education.
+                        </p>
+                        <p>
+                            - Improved public facilities like hospitals,
+                            schools, and parks.
+                        </p>
+                    </div>
                 </div>
                 <div class="small-image">
-                    <img src="university-hanoi.jpg" alt="University in Hanoi">
+                    <img src="assets/imgs/42.png" alt="University in Hanoi" />
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Slide 6: Negative effects -->
-        <section class="slide slide-negative">
-            <div class="left-text">
-                <h2 class="slide-title-negative">5. Negative effects of urbanisation</h2>
-                <div class="negative-list">
-                    <p>- High housing prices and gentrification.</p>
-                    <p>- Loss of farmland and traditional villages.</p>
-                    <p>- Traffic congestion and pollution.</p>
-                    <p>- Environmental challenges from rapid construction.</p>
+            <!-- Slide 6: Negative effects -->
+            <section class="slide slide-negative">
+                <div class="top-content">
+                    <h2 class="slide-title-negative">
+                        5. Negative effects of urbanisation
+                    </h2>
+                    <div class="negative-list">
+                        <p>- High housing prices and gentrification.</p>
+                        <p>- Loss of farmland and traditional villages.</p>
+                        <p>- Traffic congestion and pollution.</p>
+                        <p>
+                            - Environmental challenges from rapid construction.
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="negative-images">
-                <div class="image-container neg-img">
-                    <img src="high-rise-gentrification.jpg" alt="High rise buildings">
-                </div>
-                <div class="image-container neg-img">
-                    <img src="construction-site.jpg" alt="Construction site">
-                </div>
-                <div class="image-container neg-img">
-                    <img src="traffic-pollution.jpg" alt="Traffic and pollution">
-                </div>
-                <div class="image-container neg-img">
-                    <img src="smog-city.jpg" alt="City smog">
-                </div>
-            </div>
-        </section>
 
-        <!-- Slide 7: Conclusion -->
-        <section class="slide slide-conclusion">
-            <div class="conclusion-left">
-                <div class="image-container conclusion-img">
-                    <img src="urban-planning.jpg" alt="Urban planning">
+                <div class="negative-images">
+                    <div class="image-container neg-img">
+                        <img
+                            src="assets/imgs/51.png"
+                            alt="High rise buildings"
+                        />
+                    </div>
+                    <div class="image-container neg-img">
+                        <img src="assets/imgs/52.png" alt="Construction site" />
+                    </div>
+                    <div class="image-container neg-img">
+                        <img
+                            src="assets/imgs/53.png"
+                            alt="Traffic and pollution"
+                        />
+                    </div>
+                    <div class="image-container neg-img">
+                        <img src="assets/imgs/54.png" alt="City smog" />
+                    </div>
                 </div>
-            </div>
-            <div class="conclusion-right">
-                <h2 class="slide-title-conclusion">6. Conclusion</h2>
-                <div class="conclusion-points">
-                    <p><strong>- Urbanisation has transformed Hanoi into a modern city.</strong></p>
-                    <p><strong>- It brings both opportunities (jobs, modern lifestyle) and challenges (environment, housing costs).</strong></p>
-                    <p><strong>- Sustainable urbanisation is essential for balancing development with quality of life.</strong></p>
+            </section>
+
+            <!-- Slide 7: Conclusion -->
+            <section class="slide slide-conclusion">
+                <div class="conclusion-left">
+                    <div class="image-container conclusion-img">
+                        <img src="assets/imgs/61.png" alt="Urban planning" />
+                    </div>
                 </div>
-            </div>
-        </section>
+                <div class="conclusion-right">
+                    <h2 class="slide-title-conclusion">6. Conclusion</h2>
+                    <div class="conclusion-points">
+                        <p>
+                            <strong
+                                >Urbanisation has transformed Hanoi into a
+                                modern city.</strong
+                            >
+                        </p>
+                        <p>
+                            <strong
+                                >It brings both opportunities (jobs, modern
+                                lifestyle) and challenges (environment, housing
+                                costs).</strong
+                            >
+                        </p>
+                        <p>
+                            <strong
+                                >Sustainable urbanisation is essential for
+                                balancing development with quality of
+                                life.</strong
+                            >
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Slide 8: Thank You -->
-        <section class="slide slide-thankyou">
-            <div class="thankyou-content">
-                <h1 class="thankyou-title">Thanks for watching!</h1>
-            </div>
-            <div class="thankyou-image">
-                <img src="vietnam-flag-building.jpg" alt="Vietnam flag on building">
-            </div>
-        </section>
-    </div>
+            <!-- Slide 8: Thank You -->
+            <section class="slide slide-thankyou">
+                <div class="thankyou-content">
+                    <h1 class="thankyou-title">Thanks for watching!</h1>
+                </div>
+                <div class="thankyou-image">
+                    <video controls autoplay muted loop>
+                        <source
+                            src="assets/videos/AhaTok_pdtskyline_c18ac04a-1548-4f39-9fb7-65138afa0f52_.mp4"
+                            type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </section>
+        </div>
 
-    <!-- Navigation Controls -->
-    <div class="controls">
-        <button id="prevBtn" class="nav-btn">←</button>
-        <span id="slideNumber" class="slide-number">1 / 9</span>
-        <button id="nextBtn" class="nav-btn">→</button>
-        <button id="fullscreenBtn" class="fullscreen-btn">⛶</button>
-    </div>
+        <!-- Navigation Controls -->
+        <div class="controls">
+            <button id="prevBtn" class="nav-btn">←</button>
+            <span id="slideNumber" class="slide-number">1 / 9</span>
+            <button id="nextBtn" class="nav-btn">→</button>
+            <button id="fullscreenBtn" class="fullscreen-btn">⛶</button>
+        </div>
 
-    <script src="script.js"></script>
-    <script src="game.js"></script>
-</body>
+        <script src="script.js"></script>
+        <script src="game.js"></script>
+    </body>
 </html>
-

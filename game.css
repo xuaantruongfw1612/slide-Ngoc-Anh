@@ -320,7 +320,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -332,7 +332,7 @@
     background: linear-gradient(145deg, #2c3e50, #34495e);
     padding: 50px;
     border-radius: 20px;
-    max-width: 700px;
+    max-width: 800px;
     width: 90%;
     text-align: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -362,33 +362,121 @@
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 15px;
-    font-size: 24px;
+    font-size: 26px;
     color: #ffffff;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     line-height: 1.6;
     border: 2px solid rgba(255, 255, 255, 0.2);
+    font-weight: 500;
 }
 
-.answer-text {
-    background: rgba(46, 204, 113, 0.2);
-    padding: 25px;
-    border-radius: 15px;
-    font-size: 20px;
-    color: #2ecc71;
-    margin-top: 20px;
+/* Multiple Choice Options */
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-bottom: 25px;
-    line-height: 1.6;
-    border: 2px solid #2ecc71;
+}
+
+.option-btn {
+    background: linear-gradient(145deg, #34495e, #2c3e50);
+    border: 2px solid #3498db;
+    padding: 20px 25px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.option-letter {
+    background: #3498db;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.option-btn:hover:not(:disabled) {
+    background: linear-gradient(145deg, #3d5a73, #34495e);
+    border-color: #5dade2;
+    transform: translateX(10px);
+    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+}
+
+.option-btn.correct {
+    background: linear-gradient(145deg, #27ae60, #229954);
+    border-color: #2ecc71;
+    animation: correctPulse 0.5s ease;
+}
+
+.option-btn.correct .option-letter {
+    background: #2ecc71;
+}
+
+.option-btn.wrong {
+    background: linear-gradient(145deg, #c0392b, #a93226);
+    border-color: #e74c3c;
+    animation: wrongShake 0.5s ease;
+}
+
+.option-btn.wrong .option-letter {
+    background: #e74c3c;
+}
+
+@keyframes correctPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes wrongShake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+/* Result Message */
+.result-message {
+    min-height: 50px;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 25px 0;
+    padding: 20px;
+    border-radius: 15px;
     animation: fadeIn 0.3s ease;
 }
 
-.answer-text strong {
-    color: #27ae60;
-    font-size: 22px;
+.result-message.correct-answer {
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.2);
+    border: 2px solid #2ecc71;
 }
 
-.show-answer-btn,
+.result-message.wrong-answer {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.2);
+    border: 2px solid #e74c3c;
+}
+
 .close-modal-btn {
     padding: 15px 40px;
     font-size: 20px;
@@ -397,22 +485,8 @@
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin: 10px;
+    margin-top: 10px;
     font-family: 'Georgia', 'Times New Roman', serif;
-}
-
-.show-answer-btn {
-    background: linear-gradient(145deg, #3498db, #2980b9);
-    color: white;
-}
-
-.show-answer-btn:hover {
-    background: linear-gradient(145deg, #2980b9, #1f6391);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(52, 152, 219, 0.5);
-}
-
-.close-modal-btn {
     background: linear-gradient(145deg, #2ecc71, #27ae60);
     color: white;
 }
@@ -451,13 +525,23 @@
     }
     
     .question-text {
-        font-size: 20px;
+        font-size: 22px;
         padding: 20px;
     }
     
-    .answer-text {
+    .option-btn {
         font-size: 18px;
-        padding: 20px;
+        padding: 15px 20px;
+    }
+    
+    .option-letter {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+    
+    .result-message {
+        font-size: 22px;
     }
 }
 
