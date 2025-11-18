@@ -254,7 +254,7 @@ class RussianRouletteGame {
             this.spinBtn.disabled = false;
             this.shootBtn.disabled = false;
             this.gameMessage.textContent = "Cylinder spun! Ready to pull the trigger?";
-            this.gameMessage.className = 'game-message';
+            this.gameMessage.className = 'game-message ready'; // ← ĐÃ SỬA: thêm class 'ready'
         }, 800);
     }
     

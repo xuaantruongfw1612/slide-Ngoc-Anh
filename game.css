@@ -269,6 +269,13 @@
     transition: all 0.3s ease;
 }
 
+.game-message.ready {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ffffff;
+    animation: fadeIn 0.5s ease;
+}
+
 .game-message.safe {
     color: #2ecc71;
     background: rgba(46, 204, 113, 0.1);
